@@ -19,6 +19,7 @@ public class SloganMaker{
    * @return         A list of Strings that satisfies the above constraints.
    */
   public ArrayList<Token> getSlogan(String acronym) {
+    acronym = acronym.replaceAll(" ", "");
     ArrayList<Token> finalacronym = new ArrayList<>();
     ArrayList<Token> usedTokens = new ArrayList<>();
     ArrayList<Token> keysArray = new ArrayList<>(bigrams.keySet());
@@ -38,7 +39,8 @@ public class SloganMaker{
 
     for( int i = 0; i < currentWordbigrams.size(); i++) {
       Token testWord = currentWordbigrams.get(i);
-      if (testWord.toString().substring(0, 1).equals(nextLetter) && !alreadyusedtokens.contains(testWord)) {
+      String firstletter = testWord.toString().substring(0, 1).toLowerCase();
+      if (firstletter.equals(nextLetter) && !alreadyusedtokens.contains(testWord)) {
         return true;
       }
     }
@@ -50,8 +52,12 @@ public class SloganMaker{
                                             ArrayList<Token> solution){
     /* BASE CASE : If all of the words have been found, return true */
     if (lettersLeft.length() <= 1)
+
+
       for(int i = 0; i < currentWordbigrams.size(); i++){
-        if (currentWordbigrams.get(i).toString().substring(0, 1).equals(lettersLeft.substring(0, 1))){
+        String bigram_firstletter = currentWordbigrams.get(i).toString().substring(0, 1).toLowerCase();
+
+        if (bigram_firstletter.equals(lettersLeft.substring(0, 1).toLowerCase())){
           solution.add(currentWordbigrams.get(i));
           return true;
         }
