@@ -30,11 +30,17 @@ public class SloganMaker{
     else
 //      System.out.println("--------------------------------------------------------" + "\nerror error error no solution");
       return null;
-
-
   }
 
 
+    /***
+     *  Helper function to check if a given word has a bigram that begins with the next letter of the acronym. Checks
+     *  a step ahead to see if there is a viable solution.
+     * @param currentWordbigrams The list of bigrams associated with the current word
+     * @param nextLetter The next letter in the acronym
+     * @param alreadyusedtokens A list of the tokens already attempted but failed as solutions.
+     * @return Returns true if the s
+     */
   public boolean isSafe(ArrayList<Token> currentWordbigrams, String nextLetter, ArrayList<Token> alreadyusedtokens){
 
     for( int i = 0; i < currentWordbigrams.size(); i++) {
@@ -47,6 +53,7 @@ public class SloganMaker{
 
     return false;
   }
+
   public boolean recursiveSolution( ArrayList<Token> usedTokens,
                                             ArrayList<Token> currentWordbigrams, String lettersLeft,
                                             ArrayList<Token> solution){
