@@ -1,5 +1,5 @@
 # slogan-maker
-My favorite class project! Using data files of social media posts, I have created a program that provides a semi-realistic slogan from a given acronym. An external tokenizer class is being used to seperate each tweet into a collection of tokens. These tokens are used to create a list of bigrams, which are in turn used to construct slogans based on a given acronym that somewhat resemble real speech. 
+My favorite class project adapted to be much more. Using data files of social media posts, I have created a program that provides a semi-realistic slogan from a given acronym. An external tokenizer class is being used to seperate each tweet into a collection of tokens. These tokens are used to create a list of bigrams, which are in turn used to construct slogans based on a given acronym that somewhat resemble real speech. 
 
 ## Next Steps
 
