@@ -1,6 +1,9 @@
 # slogan-maker
-My favorite class project adapted to be much more. Using data files of social media posts, I have created a program that provides a semi-realistic slogan from a given acronym. An external tokenizer class is being used to seperate each tweet into a collection of tokens. These tokens are used to create a list of bigrams, which are in turn used to construct slogans based on a given acronym that somewhat resemble real speech. 
+My favorite class project adapted to be much more. Using data files of social media posts, I have created a program that provides a semi-realistic slogan from a given acronym. An external tokenizer class is being used to seperate each tweet into a collection of tokens. These tokens are used to create a list of [bigrams](https://en.wikipedia.org/wiki/Bigram), which are in turn used to construct slogans based on a given acronym that somewhat resemble real speech. 
+# Try It Yourself!
 
+If you wish to try out the software, you can clone it to your local machine. 
+Use the `javac -encoding utf8 MainGUI.java` command to compile, and `java MainGUI` to run the program
 ## Next Steps
 
 While this code runs, there are improvements that I envision. 
