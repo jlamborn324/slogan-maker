@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="636.0" prefWidth="861.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="home.Controllers.Controller">
+  <children>
+    <Button fx:id="parseBtn" layoutX="328.0"  onAction="#handleParseBtnAction" layoutY="451.0" mnemonicParsing="false" prefHeight="126.0" prefWidth="206.0" text="Parse" >
+      <stylesheets>
+        <URL value="@../CSS/fullpackstyling.css" />
+      </stylesheets>
+    </Button>
+    <Pane layoutX="0.0" layoutY="0.0" prefHeight="200.0" prefWidth="861.0" style="-fx-background-color: #31d0ff&#10;">
+      <children>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="69.0" layoutY="0.0" prefHeight="200.0001220703125" prefWidth="362.0" text=" Slogan-Maker" textAlignment="CENTER" textFill="WHITE" underline="false" wrapText="false">
+          <font>
+            <Font name="Calibri Light Italic" size="55.0" />
+          </font>
+        </Label>
+        <Label layoutX="151.0" layoutY="120.0" text="By: Joey Lamborn" textFill="WHITE">
+          <font>
+            <Font name="System Bold Italic" size="24.0" />
+          </font>
+        </Label>
+      </children>
+    </Pane>
+    <Label alignment="TOP_LEFT" contentDisplay="TOP" layoutX="235.0" layoutY="220.0" prefHeight="108.0" prefWidth="391.0" text="Contained in this program is a list of about 30,000 tweets by Donald Trump. The program runs on these tweets, and uses an algorith to create a slogan based on your given acronym." textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+      <font>
+        <Font size="18.0" />
+      </font>
+    </Label>
+    <Label alignment="CENTER" layoutX="53.0" layoutY="530.0" prefHeight="160.0" prefWidth="757.0" text="*NOTE: THE TWEETS AND PRODUCED SLOGANS DO NOT REPRESENT MY VIEWS OR BELIEFS IN ANY WAY*" wrapText="true">
+      <font>
+        <Font size="14.0" />
+      </font>
+      <stylesheets>
+        <URL value="@../CSS/fullpackstyling.css" />
+      </stylesheets>
+    </Label>
+    <Label alignment="CENTER" layoutX="242.0" layoutY="359.0" prefHeight="59.0" prefWidth="377.0" text="Press Parse to Begin!" />
+  </children>
+</AnchorPane>

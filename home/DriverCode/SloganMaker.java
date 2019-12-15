@@ -1,8 +1,10 @@
+package home.DriverCode;
+
 import java.util.*;
 
 public class SloganMaker{
 
-  private Map<Token, ArrayList<Token>> bigrams;
+  public Map<Token, ArrayList<Token>> bigrams;
 
   public SloganMaker(Map<Token, ArrayList<Token>> bigrams){
     this.bigrams = bigrams;

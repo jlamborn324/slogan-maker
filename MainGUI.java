@@ -1,3 +1,6 @@
+import home.DriverCode.SloganMaker;
+import home.DriverCode.Token;
+import home.DriverCode.TweetParser;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -17,7 +20,7 @@ public class MainGUI  extends Application {
 
 
     public static void main(String[] args) {
-        launch(args);
+        Application.launch(args);
     }
 
     @Override
@@ -64,4 +67,5 @@ public class MainGUI  extends Application {
         solutionLabel.setText(solution);
 
     }
+
 }

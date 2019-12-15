@@ -1,10 +1,10 @@
-import java.lang.reflect.Array;
+package home.DriverCode;
+
 import java.util.Scanner;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.*;
-import java.util.Collection;
 
 public class TweetParser {
     public static Map<Token, ArrayList<Token>> parseTweets(String filename) throws Exception {
