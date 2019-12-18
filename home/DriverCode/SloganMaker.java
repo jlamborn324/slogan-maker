@@ -6,10 +6,11 @@ public class SloganMaker{
 
   public Map<Token, ArrayList<Token>> bigrams;
 
+  public ArrayList<Token> solution;
+
   public SloganMaker(Map<Token, ArrayList<Token>> bigrams){
     this.bigrams = bigrams;
   }
-
 
   /**
    * Get a slogan for a given acronym. The slogan must satisfy the following
@@ -30,7 +31,6 @@ public class SloganMaker{
       return finalacronym;
     }
     else
-//      System.out.println("--------------------------------------------------------" + "\nerror error error no solution");
       return null;
   }
 
@@ -56,44 +56,53 @@ public class SloganMaker{
     return false;
   }
 
-  public boolean recursiveSolution( ArrayList<Token> usedTokens,
+  /**
+   *
+   * @param usedTokens Keeps track of all tokens used so far
+   * @param currentWordbigrams A list containing all bigrams for the current word
+   * @param lettersLeft Remaining letters of the user's inputted acroynm
+   * @param solution Running arraylist of the solutoin
+   * @return
+   */
+  public boolean recursiveSolution(ArrayList<Token> usedTokens,
                                             ArrayList<Token> currentWordbigrams, String lettersLeft,
                                             ArrayList<Token> solution){
     /* BASE CASE : If all of the words have been found, return true */
     if (lettersLeft.length() <= 1)
 
 
-      for(int i = 0; i < currentWordbigrams.size(); i++){
-        String bigram_firstletter = currentWordbigrams.get(i).toString().substring(0, 1).toLowerCase();
+      for (Token currentWordbigram : currentWordbigrams) {
+        String bigram_firstletter = currentWordbigram.toString().substring(0, 1).toLowerCase();
 
-        if (bigram_firstletter.equals(lettersLeft.substring(0, 1).toLowerCase())){
-          solution.add(currentWordbigrams.get(i));
-          return true;
-        }
+          if (lettersLeft.startsWith(bigram_firstletter)){
+            solution.add(currentWordbigram);
+            return true;
+          }
       }
 
 
     /*For the word we are currently on, try bigrams one by one */
-    for(int i = 0; i < currentWordbigrams.size(); i++){
+    // TODO Improve linear search into something more efficient. May need to sort bigram lists first?
+    for (Token currentWordbigram : currentWordbigrams) {
 
       /* Check if this word can be added */
-      if (isSafe(bigrams.get(currentWordbigrams.get(i)), lettersLeft.substring(1, 2), usedTokens) &&
-      currentWordbigrams.get(i).toString().substring(0, 1).equals(lettersLeft.substring(0, 1))) {
+      if (isSafe(bigrams.get(currentWordbigram), lettersLeft.substring(1, 2), usedTokens) &&
+              currentWordbigram.toString().substring(0, 1).equals(lettersLeft.substring(0, 1))) {
 
         /* Add the word to the solution list */
 //        System.out.println("adding \"" + currentWordbigrams.get(i) + "\" to the solution list");
-        solution.add(currentWordbigrams.get(i));
+        solution.add(currentWordbigram);
         /* Add this word to the used tokens list */
-        usedTokens.add(currentWordbigrams.get(i));
+        usedTokens.add(currentWordbigram);
 
         /*recursion to find the rest of the words */
 //        System.out.println("Remaining Letters: \"" + lettersLeft.substring(1) + "\"");
-        if(recursiveSolution(usedTokens, bigrams.get(currentWordbigrams.get(i)),
-                lettersLeft.substring(1), solution)){
+        if (recursiveSolution(usedTokens, bigrams.get(currentWordbigram),
+                lettersLeft.substring(1), solution)) {
           return true;
 
         }
-        solution.remove(currentWordbigrams.get(i)); // Backtracking here
+        solution.remove(currentWordbigram); // Backtracking here
 //        System.out.println("This one's not gonna work! Deleting: \"" + currentWordbigrams.get(i) + "\"");
 
       }

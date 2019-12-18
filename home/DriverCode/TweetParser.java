@@ -25,18 +25,16 @@ public class TweetParser {
 
                 Token nt = new Token(twokens.get(i));
                 if (i == 0) {
-                    ArrayList<Token> values = new ArrayList<>();
-                    wordCollection.put(nt, values);
+                    wordCollection.put(nt, new ArrayList<Token>());
                 }
                 else {
                     Token prev = new Token(twokens.get(i - 1));
                     if (!wordCollection.containsKey(nt)) {
-                        ArrayList<Token> values = new ArrayList<>();
-                        wordCollection.put(nt, values);
+                        wordCollection.put(nt, new ArrayList<Token>());
                     }
-                    ArrayList<Token> list = wordCollection.get(prev);
-                    list.add(nt);
-                    wordCollection.replace(prev, list);
+                    ArrayList<Token> prev_word_bigrams = wordCollection.get(prev);
+                    prev_word_bigrams.add(nt);
+                    wordCollection.replace(prev, prev_word_bigrams);
                 }
             }
 
@@ -84,7 +82,6 @@ public class TweetParser {
                     else
                         break;
                 }
-//
 
 
             // Regex that accounts for quotations within data fields
@@ -93,8 +90,6 @@ public class TweetParser {
 
 
             List<String> twokens = twokenizer.twokenize(fields[4]); // "Twokenizes" the content of the tweet
-//            System.out.print("The twokens are: ");
-
 
             for (int i = 0; i < twokens.size(); i++) {
 
@@ -116,13 +111,11 @@ public class TweetParser {
                     wordCollection.replace(prev, list);
                 }
             }
-//            System.out.println("line " + testcounter);
             testcounter++;
             line = nextline;    // Shift line to the next line
             if (scanner.hasNextLine())
                 nextline = scanner.nextLine(); // Shift nextline to the next line
         }
-//        System.out.println("Returning");
         return wordCollection;
 
     }

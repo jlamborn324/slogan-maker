@@ -2,20 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fad44ac-e772-4af9-aecc-887dc6d3373d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/home/CSS/fullpackstyling.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/Controllers/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/Controllers/MenuController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/FXML/Home.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MainGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/MainGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SloganMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/home/DriverCode/SloganMaker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Token.java" beforeDir="false" afterPath="$PROJECT_DIR$/home/DriverCode/Token.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TweetParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/home/DriverCode/TweetParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Twokenizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/home/DriverCode/Twokenizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MainGUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/DriverCode/SloganMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/home/DriverCode/SloganMaker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/DriverCode/TweetParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/home/DriverCode/TweetParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/FXML/Home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/home/FXML/Home.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,9 +35,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1576382480856" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="C:/Program Files (x86)/Oracle/JavaFX Scene Builder 1.1/JavaFX Scene Builder 1.1.exe" />
     <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
@@ -141,7 +132,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="HEAD" />
+                        <option value="origin/master" />
                       </list>
                     </value>
                   </entry>
@@ -160,6 +151,11 @@
             <list>
               <RecentGroup>
                 <option name="FILTER_VALUES">
+                  <option value="origin/master" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
                   <option value="HEAD" />
                 </option>
               </RecentGroup>
@@ -174,22 +170,30 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="536" y="325" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1368.872@0.0.1368.872" timestamp="1576386462296" />
-    <state width="1326" height="228" key="GridCell.Tab.0.bottom" timestamp="1576453173325">
+    <state x="358" y="146" key="FileChooserDialogImpl" timestamp="1576698097533">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="228" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1576453173325" />
-    <state width="1326" height="228" key="GridCell.Tab.0.center" timestamp="1576453173325">
+    <state x="358" y="146" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1576698097533" />
+    <state width="1326" height="2" key="GridCell.Tab.0.bottom" timestamp="1576533427501">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="228" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1576453173325" />
-    <state width="1326" height="228" key="GridCell.Tab.0.left" timestamp="1576453173325">
+    <state width="1326" height="2" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1576533427501" />
+    <state width="1326" height="2" key="GridCell.Tab.0.center" timestamp="1576533427501">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="228" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1576453173325" />
-    <state width="1326" height="228" key="GridCell.Tab.0.right" timestamp="1576453173325">
+    <state width="1326" height="2" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1576533427501" />
+    <state width="1326" height="2" key="GridCell.Tab.0.left" timestamp="1576533427499">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="228" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1576453173325" />
+    <state width="1326" height="2" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1576533427499" />
+    <state width="1326" height="2" key="GridCell.Tab.0.right" timestamp="1576533427501">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state width="1326" height="2" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1576533427501" />
+    <state x="165" y="10" key="SettingsEditor" timestamp="1576454793577">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state x="165" y="10" key="SettingsEditor/0.0.1368.872@0.0.1368.872" timestamp="1576454793577" />
     <state x="385" y="260" key="com.intellij.ide.util.TipDialog" timestamp="1576432845949">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
@@ -198,92 +202,5 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="343" y="200" key="run.anything.popup/0.0.1368.872@0.0.1368.872" timestamp="1576387037276" />
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>slogan-maker</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>
