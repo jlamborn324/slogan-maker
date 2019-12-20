@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="185.0" prefWidth="600.0001220703125" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="home.Controllers.Controller">
+  <children>
+    <Label layoutX="190.0" layoutY="66.0" prefHeight="51.0" prefWidth="221.0" text="Loading...">
+      <font>
+        <Font size="40.0" />
+      </font>
+    </Label>
+  </children>
+</AnchorPane>

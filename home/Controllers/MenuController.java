@@ -1,5 +1,6 @@
 package home.Controllers;
 
+import java.awt.*;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Map;
@@ -37,9 +38,22 @@ public class MenuController implements Initializable{
 
     public void handleGoBtnAction(ActionEvent event) {
         SloganMaker maker = new SloganMaker(word_dict);
-        String solution = maker.getSlogan(acronymField.getText()).toString();
-        System.out.println(solution);
-        solutionTextfield.setText(solution);
+
+        if (!acronymField.getText().matches("[a-zA-Z]+")) {
+            acronymField.setText("");
+            acronymField.setPromptText("Please only use letters");
+        }
+        else {
+            if (maker.getSlogan(acronymField.getText()) == null) {
+                solutionTextfield.setText("No solution could be found");
+
+            }
+            else{
+                String solution = maker.getSlogan(acronymField.getText()).toString();
+
+                solutionTextfield.setText(solution);
+            }
+        }
     }
 
 

@@ -14,7 +14,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 
@@ -30,13 +29,14 @@ public class Controller implements Initializable {
     @FXML
     private Button parseBtn;
 
+    @FXML
 
-    private void loadStage() {
+    private void loadStage(String fxml) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("../FXML/Menu.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource(fxml));
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
-            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setResizable(false);
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
@@ -51,11 +51,14 @@ public class Controller implements Initializable {
 
 
     public void handleParseBtnAction(javafx.event.ActionEvent actionEvent) throws Exception{
+        Stage stage = (Stage) parseBtn.getScene().getWindow();
+        parseBtn.setText("Loading...");
+
 
         MenuController.word_dict = TweetParser.parseTrumpTweets("trumptweets-1515775693.tweets.csv");
 
-        Stage stage = (Stage) parseBtn.getScene().getWindow();
         stage.close();
-        loadStage();
+
+        loadStage("../FXML/Menu.fxml");
     }
 }

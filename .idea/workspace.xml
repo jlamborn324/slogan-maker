@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fad44ac-e772-4af9-aecc-887dc6d3373d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/home/FXML/Loading.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MainGUI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/DriverCode/SloganMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/home/DriverCode/SloganMaker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/DriverCode/TweetParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/home/DriverCode/TweetParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/Controllers/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/home/Controllers/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/Controllers/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/home/Controllers/MenuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/FXML/Home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/home/FXML/Home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/FXML/Menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/home/FXML/Menu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/home/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,13 +19,19 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaFXApplication" />
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-12" />
+    <option name="y" value="-12" />
+    <option name="width" value="1390" />
+    <option name="height" value="1756" />
   </component>
   <component name="ProjectId" id="1V0HiduxOoqb8rCC1iklxU0Zc34" />
   <component name="ProjectViewState">
@@ -34,7 +42,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1576382480856" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1576815982360" />
     <property name="last_opened_file_path" value="C:/Program Files (x86)/Oracle/JavaFX Scene Builder 1.1/JavaFX Scene Builder 1.1.exe" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -115,6 +123,7 @@
       <updated>1574707626185</updated>
       <workItem from="1576383231312" duration="7338000" />
       <workItem from="1576432831745" duration="3011000" />
+      <workItem from="1576821859806" duration="2236000" />
     </task>
     <servers />
   </component>
@@ -166,38 +175,38 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="536" y="325" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1576386462296">
+    <state x="536" y="325" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1576821891113">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="536" y="325" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1368.872@0.0.1368.872" timestamp="1576386462296" />
+    <state x="536" y="325" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1368.872@0.0.1368.872" timestamp="1576821891113" />
     <state x="358" y="146" key="FileChooserDialogImpl" timestamp="1576698097533">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="358" y="146" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1576698097533" />
-    <state width="1326" height="2" key="GridCell.Tab.0.bottom" timestamp="1576533427501">
+    <state width="663" height="179" key="GridCell.Tab.0.bottom" timestamp="1576824832713">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="2" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1576533427501" />
-    <state width="1326" height="2" key="GridCell.Tab.0.center" timestamp="1576533427501">
+    <state width="663" height="179" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1576824832713" />
+    <state width="663" height="179" key="GridCell.Tab.0.center" timestamp="1576824832712">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="2" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1576533427501" />
-    <state width="1326" height="2" key="GridCell.Tab.0.left" timestamp="1576533427499">
+    <state width="663" height="179" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1576824832712" />
+    <state width="663" height="179" key="GridCell.Tab.0.left" timestamp="1576824832711">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="2" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1576533427499" />
-    <state width="1326" height="2" key="GridCell.Tab.0.right" timestamp="1576533427501">
+    <state width="663" height="179" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1576824832711" />
+    <state width="663" height="179" key="GridCell.Tab.0.right" timestamp="1576824832712">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="2" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1576533427501" />
+    <state width="663" height="179" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1576824832712" />
     <state x="165" y="10" key="SettingsEditor" timestamp="1576454793577">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="165" y="10" key="SettingsEditor/0.0.1368.872@0.0.1368.872" timestamp="1576454793577" />
-    <state x="385" y="260" key="com.intellij.ide.util.TipDialog" timestamp="1576432845949">
+    <state x="385" y="260" key="com.intellij.ide.util.TipDialog" timestamp="1576821862336">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="385" y="260" key="com.intellij.ide.util.TipDialog/0.0.1368.872@0.0.1368.872" timestamp="1576432845949" />
+    <state x="385" y="260" key="com.intellij.ide.util.TipDialog/0.0.1368.872@0.0.1368.872" timestamp="1576821862336" />
     <state x="343" y="200" key="run.anything.popup" timestamp="1576387037276">
       <screen x="0" y="0" width="1368" height="872" />
     </state>

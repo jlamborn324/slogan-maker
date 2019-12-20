@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="702.0" prefWidth="822.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="home.Controllers.MenuController">
+<AnchorPane id="Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="822.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="home.Controllers.MenuController">
   <children>
-    <GridPane alignment="CENTER" layoutY="1.0" prefHeight="701.0" prefWidth="822.0">
+    <GridPane alignment="CENTER" layoutX="0.0" layoutY="0.0" prefHeight="483.0" prefWidth="822.0">
       <children>
         <TextField fx:id="acronymField" alignment="TOP_CENTER" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP" />
         <Label alignment="BOTTOM_CENTER" contentDisplay="CENTER" prefHeight="80.0" prefWidth="465.0" text="Enter Acronym Here:" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="BOTTOM">
@@ -14,7 +15,7 @@
             <Font name="Calibri" size="24.0" />
           </font>
         </Label>
-        <Button fx:id="goBtn" mnemonicParsing="false" text="GO" GridPane.columnIndex="1" onAction="#handleGoBtnAction" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+        <Button fx:id="goBtn" mnemonicParsing="false" onAction="#handleGoBtnAction" text="GO" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
         <TextArea fx:id="solutionTextfield" prefWidth="200.0" promptText="Generated Acronym Appears Here" wrapText="true" GridPane.columnIndex="0" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
       </children>
       <columnConstraints>
