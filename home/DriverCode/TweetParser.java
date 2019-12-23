@@ -7,13 +7,15 @@ import java.util.List;
 import java.util.*;
 
 public class TweetParser {
-    public static Map<Token, ArrayList<Token>> parseTweets(String filename) throws Exception {
+    public static Map<Token, HashMap<Token, Integer>> parseTweets(String filename) throws Exception {
         ArrayList<Token> tokens = new ArrayList<Token>();
         Twokenizer twokenizer = new Twokenizer();
         Scanner scanner = new Scanner(new File(filename), "UTF-8");
         String line = scanner.nextLine(); //the first line is field headers, we do not want that.
         Token prevToken = null;
-        Map<Token, ArrayList<Token>> wordCollection = new TreeMap<>();
+        Map<Token, HashMap<Token, Integer>> wordCollection = new TreeMap<>();
+
+
         while (scanner.hasNextLine()) {
             line = scanner.nextLine();
             String[] fields = line.split("\",\"");
@@ -25,15 +27,15 @@ public class TweetParser {
 
                 Token nt = new Token(twokens.get(i));
                 if (i == 0) {
-                    wordCollection.put(nt, new ArrayList<Token>());
+                    wordCollection.put(nt, new HashMap<>());
                 }
                 else {
                     Token prev = new Token(twokens.get(i - 1));
                     if (!wordCollection.containsKey(nt)) {
-                        wordCollection.put(nt, new ArrayList<Token>());
+                        wordCollection.put(nt, new HashMap<>());
                     }
-                    ArrayList<Token> prev_word_bigrams = wordCollection.get(prev);
-                    prev_word_bigrams.add(nt);
+                    HashMap<Token, Integer> prev_word_bigrams = wordCollection.get(prev);
+                    prev_word_bigrams.put(nt, prev_word_bigrams.getOrDefault(nt, 0) + 1);
                     wordCollection.replace(prev, prev_word_bigrams);
                 }
             }
@@ -52,7 +54,8 @@ public class TweetParser {
      * @throws Exception Using files
      */
 
-    public static Map<Token, ArrayList<Token>> parseTrumpTweets(String filename) throws Exception {
+
+    public static Map<Token, PriorityQueue<Token>> parseTrumpTweets(String filename) throws Exception {
 
 
         // Initializing all the data we need for the parsing
@@ -61,10 +64,9 @@ public class TweetParser {
         Scanner scanner = new Scanner(new File(filename), "UTF-8");
         String line = scanner.nextLine(); //the first line is field headers, we do not want that.
         String nextline = scanner.nextLine();
-        Token prevToken = null;
-        Map<Token, ArrayList<Token>> wordCollection = new TreeMap<>(); // Contains map to be returned
+        Map<Token, Map<Token, Integer>> wordCollection = new TreeMap<>(); // Initialize map to be returned
 
-        int testcounter = 0; // Temporary counter to test some iterations
+        int testcounter = 0 ; // Temporary counter to test some iterations
 
 
         while (scanner.hasNextLine()) {
@@ -96,19 +98,18 @@ public class TweetParser {
                 Token nt = new Token(twokens.get(i));
 
                 if (i == 0) {
-                    ArrayList<Token> values = new ArrayList<>();
-                    wordCollection.put(nt, values);
-                } else {
+                    wordCollection.put(nt, new HashMap<>());
+                }
+                else {
                     Token prev = new Token(twokens.get(i - 1));
 
                     if (!wordCollection.containsKey(nt)) {
-                        ArrayList<Token> values = new ArrayList<>();
-                        wordCollection.put(nt, values);
+                        wordCollection.put(nt, new HashMap<>());
                     }
 
-                    ArrayList<Token> list = wordCollection.get(prev);
-                    list.add(nt);
-                    wordCollection.replace(prev, list);
+                    Map<Token, Integer> bigram_freq = wordCollection.get(prev);
+                    bigram_freq.put(nt, bigram_freq.getOrDefault(nt, 0) + 1);
+                    wordCollection.replace(prev, bigram_freq);
                 }
             }
             testcounter++;
@@ -116,10 +117,29 @@ public class TweetParser {
             if (scanner.hasNextLine())
                 nextline = scanner.nextLine(); // Shift nextline to the next line
         }
-        return wordCollection;
+        Map<Token, PriorityQueue<Token>> freqmap = new HashMap<>();
+
+        for (Token token: wordCollection.keySet()) {    // Convert each frequency dictionary into a priority queue"
+//            System.out.println("Token: " + token);
+//            for (Token x: wordCollection.get(token).keySet()) {
+//                System.out.print(x + " : " + wordCollection.get(token).get(x) + " ");
+//            }
+//
+//            System.out.println("\n---------------------");
+            freqmap.put(token, mapToHeap(wordCollection.get(token)));
+
+        }
+
+        return freqmap;
 
     }
+    public static PriorityQueue<Token> mapToHeap(Map<Token, Integer> map){
+        PriorityQueue<Token> heap = new PriorityQueue<>((n1, n2) -> map.get(n1) - map.get(n2));
+        for(Token token: map.keySet()){
+            heap.add(token);
+        }
+        return heap;
 
-
+    }
 }
 

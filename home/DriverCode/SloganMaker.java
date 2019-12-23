@@ -4,11 +4,12 @@ import java.util.*;
 
 public class SloganMaker{
 
-  public Map<Token, ArrayList<Token>> bigrams;
+  public Map<Token,PriorityQueue<Token>> bigrams;
 
   public ArrayList<Token> solution;
 
-  public SloganMaker(Map<Token, ArrayList<Token>> bigrams){
+  public SloganMaker(Map<Token, PriorityQueue<Token>> bigrams){
+
     this.bigrams = bigrams;
   }
 
@@ -22,10 +23,11 @@ public class SloganMaker{
    * @return         A list of Strings that satisfies the above constraints.
    */
   public ArrayList<Token> getSlogan(String acronym) {
-    acronym = acronym.replaceAll(" ", "");
-    ArrayList<Token> finalacronym = new ArrayList<>();
+    acronym = acronym.replaceAll(" ", ""); //user-inputted acronym
+    ArrayList<Token> finalacronym = new ArrayList<>(); // answer that will be returned
     ArrayList<Token> usedTokens = new ArrayList<>();
-    ArrayList<Token> keysArray = new ArrayList<>(bigrams.keySet());
+
+    PriorityQueue<Token> keysArray = new PriorityQueue<>(bigrams.keySet());
 
     if (recursiveSolution(usedTokens, keysArray, acronym, finalacronym)) {
       return finalacronym;
@@ -33,6 +35,12 @@ public class SloganMaker{
     else
       return null;
   }
+
+
+
+
+
+
 
 
     /***
@@ -43,10 +51,9 @@ public class SloganMaker{
      * @param alreadyusedtokens A list of the tokens already attempted but failed as solutions.
      * @return Returns true if the s
      */
-  public boolean isSafe(ArrayList<Token> currentWordbigrams, String nextLetter, ArrayList<Token> alreadyusedtokens){
+  public boolean isSafe(PriorityQueue<Token> currentWordbigrams, String nextLetter, ArrayList<Token> alreadyusedtokens){
 
-    for( int i = 0; i < currentWordbigrams.size(); i++) {
-      Token testWord = currentWordbigrams.get(i);
+    for (Token testWord : currentWordbigrams) {
       String firstletter = testWord.toString().substring(0, 1).toLowerCase();
       if (firstletter.equals(nextLetter) && !alreadyusedtokens.contains(testWord)) {
         return true;
@@ -65,7 +72,7 @@ public class SloganMaker{
    * @return
    */
   public boolean recursiveSolution(ArrayList<Token> usedTokens,
-                                            ArrayList<Token> currentWordbigrams, String lettersLeft,
+                                            PriorityQueue<Token> currentWordbigrams, String lettersLeft,
                                             ArrayList<Token> solution){
     /* BASE CASE : If all of the words have been found, return true */
     if (lettersLeft.length() <= 1)
@@ -82,7 +89,6 @@ public class SloganMaker{
 
 
     /*For the word we are currently on, try bigrams one by one */
-    // TODO Improve linear search into something more efficient. May need to sort bigram lists first?
     for (Token currentWordbigram : currentWordbigrams) {
 
       /* Check if this word can be added */
@@ -90,20 +96,20 @@ public class SloganMaker{
               currentWordbigram.toString().substring(0, 1).equals(lettersLeft.substring(0, 1))) {
 
         /* Add the word to the solution list */
-//        System.out.println("adding \"" + currentWordbigrams.get(i) + "\" to the solution list");
+        System.out.println("adding \"" + currentWordbigram + "\" to the solution list");
         solution.add(currentWordbigram);
         /* Add this word to the used tokens list */
         usedTokens.add(currentWordbigram);
 
         /*recursion to find the rest of the words */
-//        System.out.println("Remaining Letters: \"" + lettersLeft.substring(1) + "\"");
+        System.out.println("Remaining Letters: \"" + lettersLeft.substring(1) + "\"");
         if (recursiveSolution(usedTokens, bigrams.get(currentWordbigram),
                 lettersLeft.substring(1), solution)) {
           return true;
 
         }
         solution.remove(currentWordbigram); // Backtracking here
-//        System.out.println("This one's not gonna work! Deleting: \"" + currentWordbigrams.get(i) + "\"");
+        System.out.println("This one's not gonna work! Deleting: \"" + currentWordbigram + "\"");
 
       }
     }

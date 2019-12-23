@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fad44ac-e772-4af9-aecc-887dc6d3373d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/home/FXML/Loading.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/DriverCode/test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/Controllers/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/home/Controllers/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/Controllers/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/home/Controllers/MenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/FXML/Home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/home/FXML/Home.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/FXML/Menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/home/FXML/Menu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/home/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/DriverCode/SloganMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/home/DriverCode/SloganMaker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/DriverCode/Token.java" beforeDir="false" afterPath="$PROJECT_DIR$/home/DriverCode/Token.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/DriverCode/TweetParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/home/DriverCode/TweetParser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,19 +18,13 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaFXApplication" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-12" />
-    <option name="y" value="-12" />
-    <option name="width" value="1390" />
-    <option name="height" value="1756" />
   </component>
   <component name="ProjectId" id="1V0HiduxOoqb8rCC1iklxU0Zc34" />
   <component name="ProjectViewState">
@@ -90,9 +83,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="home.DriverCode.test" />
+      <module name="slogan-maker" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="home.DriverCode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.test" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.MainGUI" />
         <item itemvalue="Application.Test" />
@@ -123,7 +130,8 @@
       <updated>1574707626185</updated>
       <workItem from="1576383231312" duration="7338000" />
       <workItem from="1576432831745" duration="3011000" />
-      <workItem from="1576821859806" duration="2236000" />
+      <workItem from="1576821859806" duration="3555000" />
+      <workItem from="1576880592510" duration="9207000" />
     </task>
     <servers />
   </component>
@@ -175,6 +183,10 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="490" y="145" key="#com.intellij.ide.util.MemberChooser" timestamp="1577065488411">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state x="490" y="145" key="#com.intellij.ide.util.MemberChooser/0.0.1368.872@0.0.1368.872" timestamp="1577065488411" />
     <state x="536" y="325" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1576821891113">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
@@ -183,30 +195,46 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="358" y="146" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1576698097533" />
-    <state width="663" height="179" key="GridCell.Tab.0.bottom" timestamp="1576824832713">
+    <state width="663" height="225" key="GridCell.Tab.0.bottom" timestamp="1577066286844">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="663" height="179" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1576824832713" />
-    <state width="663" height="179" key="GridCell.Tab.0.center" timestamp="1576824832712">
+    <state width="663" height="225" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1577066286844" />
+    <state width="663" height="225" key="GridCell.Tab.0.center" timestamp="1577066286844">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="663" height="179" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1576824832712" />
-    <state width="663" height="179" key="GridCell.Tab.0.left" timestamp="1576824832711">
+    <state width="663" height="225" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1577066286844" />
+    <state width="663" height="225" key="GridCell.Tab.0.left" timestamp="1577066286844">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="663" height="179" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1576824832711" />
-    <state width="663" height="179" key="GridCell.Tab.0.right" timestamp="1576824832712">
+    <state width="663" height="225" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1577066286844" />
+    <state width="663" height="225" key="GridCell.Tab.0.right" timestamp="1577066286844">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="663" height="179" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1576824832712" />
+    <state width="663" height="225" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1577066286844" />
+    <state width="663" height="281" key="GridCell.Tab.1.bottom" timestamp="1577064358883">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state width="663" height="281" key="GridCell.Tab.1.bottom/0.0.1368.872@0.0.1368.872" timestamp="1577064358883" />
+    <state width="663" height="281" key="GridCell.Tab.1.center" timestamp="1577064358882">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state width="663" height="281" key="GridCell.Tab.1.center/0.0.1368.872@0.0.1368.872" timestamp="1577064358882" />
+    <state width="663" height="281" key="GridCell.Tab.1.left" timestamp="1577064358882">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state width="663" height="281" key="GridCell.Tab.1.left/0.0.1368.872@0.0.1368.872" timestamp="1577064358882" />
+    <state width="663" height="281" key="GridCell.Tab.1.right" timestamp="1577064358882">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state width="663" height="281" key="GridCell.Tab.1.right/0.0.1368.872@0.0.1368.872" timestamp="1577064358882" />
     <state x="165" y="10" key="SettingsEditor" timestamp="1576454793577">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="165" y="10" key="SettingsEditor/0.0.1368.872@0.0.1368.872" timestamp="1576454793577" />
-    <state x="385" y="260" key="com.intellij.ide.util.TipDialog" timestamp="1576821862336">
+    <state x="385" y="260" key="com.intellij.ide.util.TipDialog" timestamp="1576880593141">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="385" y="260" key="com.intellij.ide.util.TipDialog/0.0.1368.872@0.0.1368.872" timestamp="1576821862336" />
+    <state x="385" y="260" key="com.intellij.ide.util.TipDialog/0.0.1368.872@0.0.1368.872" timestamp="1576880593141" />
     <state x="343" y="200" key="run.anything.popup" timestamp="1576387037276">
       <screen x="0" y="0" width="1368" height="872" />
     </state>

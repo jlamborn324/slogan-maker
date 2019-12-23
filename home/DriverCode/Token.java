@@ -11,6 +11,21 @@ public class Token implements Comparable<Token>{
     this.grams = new ArrayList<Token>();
   }
 
+
+  public boolean equals(Object o){
+    if (o == this){
+      return true;
+    }
+    if (!(o instanceof Token) ){
+      return false;
+    }
+    return o.toString().equals(this.toString());
+
+  }
+  public int hashCode(){
+    return this.toString().hashCode();
+  }
+
   public boolean addGram(Token t){
     return grams.add(t);
   }

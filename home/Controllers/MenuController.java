@@ -4,6 +4,7 @@ import java.awt.*;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Map;
+import java.util.PriorityQueue;
 import java.util.ResourceBundle;
 
 import home.DriverCode.SloganMaker;
@@ -18,7 +19,7 @@ import javafx.scene.control.TextField;
 
 public class MenuController implements Initializable{
 
-    protected static Map<Token, ArrayList<Token>> word_dict;
+    protected static Map<Token, PriorityQueue<Token>> word_dict;
 
     @FXML
     private ResourceBundle resources;
