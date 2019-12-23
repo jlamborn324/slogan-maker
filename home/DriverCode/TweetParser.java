@@ -134,7 +134,7 @@ public class TweetParser {
 
     }
     public static PriorityQueue<Token> mapToHeap(Map<Token, Integer> map){
-        PriorityQueue<Token> heap = new PriorityQueue<>((n1, n2) -> map.get(n1) - map.get(n2));
+        PriorityQueue<Token> heap = new PriorityQueue<>((n1, n2) -> map.get(n2) - map.get(n1));
         for(Token token: map.keySet()){
             heap.add(token);
         }

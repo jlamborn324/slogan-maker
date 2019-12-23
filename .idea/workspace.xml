@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fad44ac-e772-4af9-aecc-887dc6d3373d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/home/DriverCode/test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/Controllers/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/home/Controllers/MenuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/DriverCode/SloganMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/home/DriverCode/SloganMaker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/DriverCode/Token.java" beforeDir="false" afterPath="$PROJECT_DIR$/home/DriverCode/Token.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/DriverCode/TweetParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/home/DriverCode/TweetParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/DriverCode/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/home/DriverCode/test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +130,7 @@
       <workItem from="1576383231312" duration="7338000" />
       <workItem from="1576432831745" duration="3011000" />
       <workItem from="1576821859806" duration="3555000" />
-      <workItem from="1576880592510" duration="9207000" />
+      <workItem from="1576880592510" duration="14726000" />
     </task>
     <servers />
   </component>
@@ -191,26 +190,30 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="536" y="325" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1368.872@0.0.1368.872" timestamp="1576821891113" />
+    <state x="223" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1577067179237">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state x="223" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1368.872@0.0.1368.872" timestamp="1577067179237" />
     <state x="358" y="146" key="FileChooserDialogImpl" timestamp="1576698097533">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="358" y="146" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1576698097533" />
-    <state width="663" height="225" key="GridCell.Tab.0.bottom" timestamp="1577066286844">
+    <state width="663" height="166" key="GridCell.Tab.0.bottom" timestamp="1577070941088">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="663" height="225" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1577066286844" />
-    <state width="663" height="225" key="GridCell.Tab.0.center" timestamp="1577066286844">
+    <state width="663" height="166" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1577070941088" />
+    <state width="663" height="166" key="GridCell.Tab.0.center" timestamp="1577070941088">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="663" height="225" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1577066286844" />
-    <state width="663" height="225" key="GridCell.Tab.0.left" timestamp="1577066286844">
+    <state width="663" height="166" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1577070941088" />
+    <state width="663" height="166" key="GridCell.Tab.0.left" timestamp="1577070941088">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="663" height="225" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1577066286844" />
-    <state width="663" height="225" key="GridCell.Tab.0.right" timestamp="1577066286844">
+    <state width="663" height="166" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1577070941088" />
+    <state width="663" height="166" key="GridCell.Tab.0.right" timestamp="1577070941088">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="663" height="225" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1577066286844" />
+    <state width="663" height="166" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1577070941088" />
     <state width="663" height="281" key="GridCell.Tab.1.bottom" timestamp="1577064358883">
       <screen x="0" y="0" width="1368" height="872" />
     </state>

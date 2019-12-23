@@ -2,120 +2,89 @@ package home.DriverCode;
 
 import java.util.*;
 
-public class SloganMaker{
+public class SloganMaker {
 
-  public Map<Token,PriorityQueue<Token>> bigrams;
+    public Map<Token, PriorityQueue<Token>> tokensandbigrams;
+    public ArrayList<Token> solution = new ArrayList<>();
 
-  public ArrayList<Token> solution;
-
-  public SloganMaker(Map<Token, PriorityQueue<Token>> bigrams){
-
-    this.bigrams = bigrams;
-  }
-
-  /**
-   * Get a slogan for a given acronym. The slogan must satisfy the following
-   * constraints:
-   *   1. The first character of each String corresponds with a character in the acronym passed as a
-   *   parameter to the method in the same order.
-   *   2. Adjacent tokens must be bigrams in the corpus of text used to generate the list of tokens.
-   * @param  acronym The acronym that will be used to create a slogan
-   * @return         A list of Strings that satisfies the above constraints.
-   */
-  public ArrayList<Token> getSlogan(String acronym) {
-    acronym = acronym.replaceAll(" ", ""); //user-inputted acronym
-    ArrayList<Token> finalacronym = new ArrayList<>(); // answer that will be returned
-    ArrayList<Token> usedTokens = new ArrayList<>();
-
-    PriorityQueue<Token> keysArray = new PriorityQueue<>(bigrams.keySet());
-
-    if (recursiveSolution(usedTokens, keysArray, acronym, finalacronym)) {
-      return finalacronym;
+    public SloganMaker(Map<Token, PriorityQueue<Token>> bigrams) {
+        this.tokensandbigrams = bigrams;
     }
-    else
-      return null;
-  }
-
-
-
-
-
-
 
 
     /***
-     *  Helper function to check if a given word has a bigram that begins with the next letter of the acronym. Checks
-     *  a step ahead to see if there is a viable solution.
-     * @param currentWordbigrams The list of bigrams associated with the current word
-     * @param nextLetter The next letter in the acronym
-     * @param alreadyusedtokens A list of the tokens already attempted but failed as solutions.
-     * @return Returns true if the s
+     * Recursive funtion that finds a solution for the sloganmaker. Solution is made in the this.solution field
+     * @param acronym String given by the user
+     * @param tokens List of bigrams to choose from. First function call, this list contains every
+     *               word used. After that, it contains a list of all bigrams that come after a word we are checking for
+     *               solution
+     * @return  true if a solution was found, false is a solution could not be found
      */
-  public boolean isSafe(PriorityQueue<Token> currentWordbigrams, String nextLetter, ArrayList<Token> alreadyusedtokens){
+    public boolean getSlogan(String acronym, PriorityQueue<Token> tokens) {
 
-    for (Token testWord : currentWordbigrams) {
-      String firstletter = testWord.toString().substring(0, 1).toLowerCase();
-      if (firstletter.equals(nextLetter) && !alreadyusedtokens.contains(testWord)) {
-        return true;
-      }
-    }
-
-    return false;
-  }
-
-  /**
-   *
-   * @param usedTokens Keeps track of all tokens used so far
-   * @param currentWordbigrams A list containing all bigrams for the current word
-   * @param lettersLeft Remaining letters of the user's inputted acroynm
-   * @param solution Running arraylist of the solutoin
-   * @return
-   */
-  public boolean recursiveSolution(ArrayList<Token> usedTokens,
-                                            PriorityQueue<Token> currentWordbigrams, String lettersLeft,
-                                            ArrayList<Token> solution){
-    /* BASE CASE : If all of the words have been found, return true */
-    if (lettersLeft.length() <= 1)
-
-
-      for (Token currentWordbigram : currentWordbigrams) {
-        String bigram_firstletter = currentWordbigram.toString().substring(0, 1).toLowerCase();
-
-          if (lettersLeft.startsWith(bigram_firstletter)){
-            solution.add(currentWordbigram);
-            return true;
-          }
-      }
-
-
-    /*For the word we are currently on, try bigrams one by one */
-    for (Token currentWordbigram : currentWordbigrams) {
-
-      /* Check if this word can be added */
-      if (isSafe(bigrams.get(currentWordbigram), lettersLeft.substring(1, 2), usedTokens) &&
-              currentWordbigram.toString().substring(0, 1).equals(lettersLeft.substring(0, 1))) {
-
-        /* Add the word to the solution list */
-        System.out.println("adding \"" + currentWordbigram + "\" to the solution list");
-        solution.add(currentWordbigram);
-        /* Add this word to the used tokens list */
-        usedTokens.add(currentWordbigram);
-
-        /*recursion to find the rest of the words */
-        System.out.println("Remaining Letters: \"" + lettersLeft.substring(1) + "\"");
-        if (recursiveSolution(usedTokens, bigrams.get(currentWordbigram),
-                lettersLeft.substring(1), solution)) {
-          return true;
-
+        /** base case, the acronym is down to the last letter. Find the last word that
+            finishes the solution and then return true. (There will always be a last
+            word that finishes the solution because of the isSafe method that was used previously */
+        if(acronym.length() == 1){
+            String currentletter = acronym.substring(0, 1);
+            for(Token token: tokens){
+                if (token.toString().startsWith(currentletter)){
+                    solution.add(token);
+                    return true;
+                }
+            }
+            return false;
         }
-        solution.remove(currentWordbigram); // Backtracking here
-        System.out.println("This one's not gonna work! Deleting: \"" + currentWordbigram + "\"");
 
-      }
+
+        String currentletter = acronym.substring(0, 1);
+        String nextletter = acronym.substring(1, 2);
+
+        for (Token token : tokens) {    // iterate through given lists of tokens to find a viable next step
+            if (token.toString().startsWith(currentletter)) {
+                if (isSafe(tokensandbigrams.get(token), nextletter)) {
+                    solution.add(token);
+//                    System.out.println("Adding " + token + " to solution");   //uncomment when testing
+                    /**
+                     * Recursive call to find a solution. If a recursive call returns false( If there is no viable next
+                     * step for the word added to the solution), then the program will step a level back up, and change
+                     * to the next word. This is where the backtracking is implemented.
+                     */
+                    if (getSlogan(acronym.substring(1), tokensandbigrams.get(token))) {
+                        return true;
+                    }
+
+                    // If we reach a word that does not have a viable option to it, we will remove it and keep iterating
+//                    System.out.println(solution.get(solution.size()-1) + " will not work, Deleting..."); // uncomment when testing
+                    solution.remove(solution.size() - 1);
+                }
+            }
+        }
+        return false;
+
+
     }
-    return false;
-  
 
-  }
+    /**
+     * Helpe function to determine if a word will work as a solution. Checks to see if a word that is being considered
+     * has a word in its bigrams that beings with the next letter in the acronym.
+     * 
+     * @param currentwordbigrams All bigrams for the word we are checking, these are all of the possible
+     *                           next steps to the solution.
+     * @param nextletter The next letter that needs to be fulfilled in the user-inputted acronym
+     * @return boolean determining whether or not a given word that is being considered for the solution is viable.
+     * If the word doesn't have a word in its bigrams that begins with the next letter we need in the acronym, then
+     * this word is not viable.
+     */
+    public boolean isSafe(PriorityQueue<Token> currentwordbigrams, String nextletter) {
+        for (Token token : currentwordbigrams) {
+            if (token.toString().startsWith(nextletter)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+
 
 }

@@ -1,8 +1,6 @@
 package home.Controllers;
 
-import java.awt.*;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.ResourceBundle;
@@ -45,13 +43,12 @@ public class MenuController implements Initializable{
             acronymField.setPromptText("Please only use letters");
         }
         else {
-            if (maker.getSlogan(acronymField.getText()) == null) {
+            if (!maker.getSlogan(acronymField.getText(), new PriorityQueue<>(word_dict.keySet()))) {
                 solutionTextfield.setText("No solution could be found");
 
             }
             else{
-                String solution = maker.getSlogan(acronymField.getText()).toString();
-
+                String solution = maker.solution.toString();
                 solutionTextfield.setText(solution);
             }
         }
