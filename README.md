@@ -11,9 +11,13 @@ As I continue to learn more about sorting algorithms, data structures, and time 
 
 ### 2. More Realistic Slogans
 
-At its current stage, the slogans that are produced don't always make the most sense. If there were to be some measurement of how frequently words are found next to eachother, for example, more realistic slogans could be produced. 
+At its current stage, the slogans that are produced don't always make the most sense. Sometimes, things slip in that aren't words, like links and such. Adding some way for the slogan-maker to check words against an english dictionary would make slogans more realistic. 
 
 ### 3. Scale Up
 
-Currently, the slogan generator can't always find a solution for a given acronym. There just aren't enough tweets for longer or more obsucre acronyms. As I improve this project, I will be keeping in mind how I can pump more data into the slogan maker and utilize it to make longer and more realistic slogans. 
+Currently, the slogan generator takes a long-long time to parse the 30,000 tweets its using. I hope to make this more efficient, and I am researching the best way how. 
+
+### 4. GUI Problems
+
+The GUI freezes up when the code is doing heavy tasks, like the parsing. Implementing multi-threading would keep the GUI and heavy tasks seperate, and provide a smoother user experience. 
 
